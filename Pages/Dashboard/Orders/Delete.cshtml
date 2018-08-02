@@ -1,0 +1,46 @@
+@page
+@model ProjectDashboard.Pages.Dashboard.Orders.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Order</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Order.Title)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Order.Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Order.DateCreated)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Order.DateCreated)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Order.DateScheduledForProduction)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Order.DateScheduledForProduction)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Order.DateScheduledForDelivery)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Order.DateScheduledForDelivery)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Order.ID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>
