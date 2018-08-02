@@ -15,6 +15,7 @@ Icon
 ._*
 
 # compiled output
+/wwwroot
 /dist
 /tmp
 /out-tsc
